@@ -23,7 +23,7 @@ const initialState = {
   order: {
     trip: null,
     email: '',
-    options: {},
+    options:{},
   },
 };
 
