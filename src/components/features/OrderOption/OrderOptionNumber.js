@@ -3,7 +3,7 @@ import styles from './OrderOption.scss';
 import PropTypes from 'prop-types';
 import { formatPrice } from '../../../utils/formatPrice';
 
-const OrderOptionNumber = ({price, limits, currentValue, setOptionValue}) => (
+export const OrderOptionNumber = ({price, limits, currentValue, setOptionValue}) => (
   <div className={styles.number}>
     <input
       className={styles.inputSmall}

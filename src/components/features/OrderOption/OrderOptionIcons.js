@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Icon from '../../common/Icon/Icon';
 import { formatPrice } from '../../../utils/formatPrice';
 
-const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
+export const OrderOptionIcons = ({values, required, currentValue, setOptionValue}) => (
   <div className={styles.component}>
     {required ? '' : (
       <div className={currentValue == '' ? `${styles.icon} ${styles.iconActive}` : styles.icon}

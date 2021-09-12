@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './OrderOption.scss';
-import OrderOptionDropdown from './OrderOptionDropdown';
-import OrderOptionIcons from './OrderOptionIcons';
-import OrderOptionCheckboxes from './OrderOptionCheckboxes';
-import OrderOptionNumber from './OrderOptionNumber';
+import {OrderOptionDropdown} from './OrderOptionDropdown';
+import {OrderOptionIcons} from './OrderOptionIcons';
+import {OrderOptionCheckboxes} from './OrderOptionCheckboxes';
+import {OrderOptionNumber} from './OrderOptionNumber';
+import {OrderOptionDate} from './OrderOptionDate';
+import {OrderOptionText} from './OrderOptionText';
 
 
 const optionTypes = {
@@ -11,6 +13,8 @@ const optionTypes = {
   icons: OrderOptionIcons,
   checkboxes: OrderOptionCheckboxes,
   number: OrderOptionNumber,
+  text: OrderOptionText,
+  date: OrderOptionDate,
 };
 
 // class OrderOption extends React.Component {
@@ -25,6 +29,7 @@ const optionTypes = {
 
 const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
   const OptionComponent = optionTypes[type];
+  console.log(type , OptionComponent);
   if(!OptionComponent){
     return null;
   } else {
@@ -38,5 +43,7 @@ const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
     );
   }
 };
+
+
 
 export default OrderOption;
