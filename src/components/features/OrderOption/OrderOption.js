@@ -44,6 +44,4 @@ const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
   }
 };
 
-
-
 export default OrderOption;
