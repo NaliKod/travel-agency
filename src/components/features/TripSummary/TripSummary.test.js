@@ -49,9 +49,9 @@ describe('Component TripSummary', () => {
   });
 
   it('should not render empty tags', () => {
-    const expectedTags = [];
+    //const expectedTags = [];
     const renderedTag = component.find('.tags div');
-    expect(renderedTag.exists(expectedTags)).toBeFalsy;
+    expect(renderedTag.exists()).toBeFalsy;
   });
 
 });
