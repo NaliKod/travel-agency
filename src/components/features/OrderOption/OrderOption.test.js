@@ -52,7 +52,7 @@ describe('component OrderOption', () => {
   const mockPropsForType = {
     dropdown: {},
     icons: {},
-    checkboxes: {currentValue: [mockProps.currentValue]},
+    checkboxes: {currentValue: '[mockProps.currentValue]'},
     number: {currentValue: '1'},
     text: {},
     date: {},
