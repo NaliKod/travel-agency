@@ -29,7 +29,7 @@ export const optionTypes = {
 
 const OrderOption = ({name, type, id, setOrderOption, ...otherProps}) => {
   const OptionComponent = optionTypes[type];
-  console.log(type , OptionComponent);
+  //console.log(type , OptionComponent);
   if(!OptionComponent){
     return null;
   } else {
