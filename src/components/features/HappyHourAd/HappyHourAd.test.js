@@ -9,8 +9,13 @@ const select = {
 
 const mockProps = {
   title: 'Promotion',
-  promoDescription: 'You have a promotion 20%',
+  description: 'You have a promotion 20%',
 };
+
+beforeAll(() => {
+  const utilsModule = jest.requireActual('../../../utils/formatTime.js');
+  utilsModule.formatTime = jest.fn(seconds => seconds);
+});
 
 describe('component HappyHourAd', () => {
 
@@ -94,9 +99,9 @@ describe('Component HappyHourAd with mocked Date and delay', () => {
 });
 
 describe('Component HappyHourAd with mocked Date', () => {
-  checkDescriptionAtTime('12:00:00', mockProps.promoDescription);
-  checkDescriptionAtTime('12:30:00', mockProps.promoDescription);
-  checkDescriptionAtTime('12:59:59', mockProps.promoDescription);
+  checkDescriptionAtTime('12:00:00', mockProps.description);
+  checkDescriptionAtTime('12:30:00', mockProps.description);
+  checkDescriptionAtTime('12:59:59', mockProps.description);
 });
 
 describe('Component HappyHourAd with mocked Date', () => {

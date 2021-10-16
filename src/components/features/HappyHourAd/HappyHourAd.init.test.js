@@ -65,15 +65,15 @@ describe('component HappyHourAd', () => {
   };
 
   describe('Component HappyHourAd with mocked Date', () => {
-    checkDescriptionAtTime('11:57:58', '122');
-    checkDescriptionAtTime('11:59:59', '1');
-    checkDescriptionAtTime('13:00:00', 23 * 60 * 60 + '');
+    checkDescriptionAtTime('11:57:58', '00:02:02');
+    checkDescriptionAtTime('11:59:59', '00:00:01');
+    checkDescriptionAtTime('13:00:00', '23:00:00');
   });
 
-  describe('Component HappyHourAd with mocked Date and delay', () => {
-    checkDescriptionAfterTime('11:57:58', 2, '120');
-    checkDescriptionAfterTime('11:59:58', 1, '1');
-    checkDescriptionAfterTime('13:00:00', 60 * 60, 22 * 60 * 60 + '');
+  describe('Component HappyHourAd with mocked Date', () => {
+    checkDescriptionAfterTime('11:57:58', 5, '00:01:57');
+    checkDescriptionAfterTime('11:59:56', 3, '00:00:01');
+    checkDescriptionAfterTime('13:00:00', 2 * 60 * 60, '21:00:00');
   });
 
 });
