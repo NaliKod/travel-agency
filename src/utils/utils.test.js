@@ -1,5 +1,5 @@
 import { formatTime } from './formatTime';
-import { promoPrice } from './formatPrice';
+import { promoPrice } from './promoPrice';
 
 describe('utils', () => {
   describe('formatTime', () => {
